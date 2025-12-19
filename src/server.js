@@ -5,7 +5,8 @@ import cors from "cors";
 import notificationRoutes from "./routes/notification.routes.js";
 import { connectDB } from "./db/connectDB.js";
 import { initSocket } from "./socket/socket.js";
-
+import dotenv from 'dotenv';
+dotenv.config();
 const app = express();
 
 app.use(cors({
@@ -28,6 +29,7 @@ const io = new Server(server, {
 await connectDB();
 initSocket(io);
 
-server.listen(3000, () => {
+const PORT=process.env.PORT||3000;
+server.listen(PORT, () => {
     console.log(" Server running on port 3000");
 });
