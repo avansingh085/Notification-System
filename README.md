@@ -45,6 +45,7 @@ A high-performance notification service built with **Node.js**, **Express**, **S
 1.  **Clone the Repository**
     ```bash
     git clone https://github.com/avansingh085/Notification-System.git
+    cd Notification-System
     
     ```
 
